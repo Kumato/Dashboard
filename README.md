@@ -1,4 +1,4 @@
-# kumato-dashboard
+# dashboard
 
 ## Project setup
 ```

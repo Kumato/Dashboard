@@ -1,15 +1,8 @@
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import locale from 'element-ui/lib/locale/lang/en';
-import '../theme/index.css';
-import '../theme/fonts.css';
+import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import installElementPlus from './plugins/element';
 
-Vue.config.productionTip = false;
-Vue.use(ElementUI, { locale });
-
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');
+const app = createApp(App);
+installElementPlus(app);
+app.use(router).mount('#app');
